@@ -2,13 +2,15 @@
 
 import Image from "next/image";
 import NavBar from "../components/NavBar";
-import Landing from "../components/Landing";
+import Minting from "../components/Minting";
+import About from "../components/About";
 
 export default function Home() {
   return (
     <main>
       <NavBar />
-      <Landing />
+      <Minting />
+      <About />
     </main>
   );
 }

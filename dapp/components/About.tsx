@@ -8,7 +8,7 @@ function Landing() {
 
   return (
     <div>
-      <section className="bg-amber-700 min-h-dvh "></section>
+      <section className="bg-slate-700 min-h-dvh "></section>
     </div>
   );
 }

@@ -36,7 +36,7 @@ function NavBar() {
             </li>
             <li>
               <button className="pixelify text-xl font-semibold hover:text-white hover:scale-110 transition duration-50 -translate-y-2 lg:block hidden">
-                Whitepaper
+                Gallery
               </button>
             </li>
             <li>
@@ -93,7 +93,7 @@ function NavBar() {
           </li>
           <li>
             <button className="pixelify text-4xl font-semibold hover:text-white hover:scale-110 transition duration-50">
-              Whitepaper
+              Gallery
             </button>
           </li>
           <li>

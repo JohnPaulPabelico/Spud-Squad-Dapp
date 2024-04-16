@@ -8,53 +8,46 @@ function NavBar() {
 
   return (
     <div>
-      <section className="bg-yellow-400 bg-opacity-70 flex items-center lg:fixed fixed top-0 w-full shadow px-10 min-h-24 justify-between z-10">
-        <Image src="/images/Mascot.png" alt="logo" width={150} height={150} />
-        <ul className="flex gap-10">
-          <li>
-            <button className="pixelify text-xl hover:text-white hover:-translate-y-1 transition duration-50">
-              Mint
-            </button>
-          </li>
-          <li>
-            <button className="pixelify text-xl hover:text-white hover:-translate-y-1 transition duration-50">
-              About
-            </button>
-          </li>
-          <li>
-            <button className="pixelify text-xl hover:text-white hover:-translate-y-1 transition duration-50">
-              Whitepaper
-            </button>
-          </li>
-          <li>
-            <button className="pixelify text-xl hover:text-white hover:-translate-y-1 transition duration-50">
-              FAQ
-            </button>
-          </li>
-          {/* <li
-            className={`m-3 text-2xl cursor-pointer hover:text-blue-500 transition duration-200 lg:hidden`}
-          >
-            {barState ? (
-              <GrClose
-                onClick={() => {
-                  setBarState(!barState);
-                  console.log(barState);
-                }}
-              />
-            ) : (
-              <FaBars
-                onClick={() => {
-                  setBarState(!barState);
-                  console.log(barState);
-                }}
-              />
-            )}
-          </li> */}
-        </ul>
-        <button className="pixelify text-xl bg-yellow-200 px-4 py-2 rounded-full hover:bg-yellow-300 transition duration-50 shadow-lg ">
-          Connect Wallet
-        </button>
-      </section>
+      <div className="fixed w-full overflow-hidden">
+        <div
+          className="absolute inset-0 z-0 bg-repeat"
+          style={{ backgroundImage: "url('/images/Grass Tile Upscaled.png')" }}
+        />
+        <div className="relative z-10 min-h-32 flex items-center justify-between top-0 shadow-xl px-10">
+          <Image
+            src="/images/Mascot.png"
+            alt="logo"
+            width={170}
+            height={170}
+            className="-translate-y-1"
+          />
+          <ul className="flex gap-10">
+            <li>
+              <button className="pixelify text-xl font-semibold hover:text-white hover:scale-110 transition duration-50 -translate-y-2">
+                Mint
+              </button>
+            </li>
+            <li>
+              <button className="pixelify text-xl font-semibold hover:text-white hover:scale-110 transition duration-50 -translate-y-2">
+                About
+              </button>
+            </li>
+            <li>
+              <button className="pixelify text-xl font-semibold hover:text-white hover:scale-110 transition duration-50 -translate-y-2">
+                Whitepaper
+              </button>
+            </li>
+            <li>
+              <button className="pixelify text-xl font-semibold hover:text-white hover:scale-110 transition duration-50 -translate-y-2">
+                FAQ
+              </button>
+            </li>
+          </ul>
+          <button className="pixelify font-semibold text-xl bg-yellow-400 px-4 py-2 rounded-full hover:bg-yellow-500 transition duration-50 shadow-lg -translate-y-2">
+            Connect Wallet
+          </button>
+        </div>
+      </div>
     </div>
   );
 }

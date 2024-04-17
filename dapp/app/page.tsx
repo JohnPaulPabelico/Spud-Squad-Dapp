@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <main>
       <NavBar />
-      <Minting />
+      {/* <Minting />
       <div
         style={{
           backgroundImage: 'url("images/Assets/Dirt Joiner 1 Upscaled.png")',
@@ -33,7 +33,7 @@ export default function Home() {
         className="min-h-32 bg-repeat"
       ></div>
       <FAQ />
-      <Footer />
+      <Footer /> */}
     </main>
   );
 }

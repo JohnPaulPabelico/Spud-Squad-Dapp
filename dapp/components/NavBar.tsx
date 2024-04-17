@@ -25,22 +25,22 @@ function NavBar() {
           />
           <ul className="flex gap-10">
             <li>
-              <button className="pixelify text-xl font-semibold hover:text-white hover:scale-110 transition duration-50 -translate-y-2 lg:block hidden">
+              <button className="pixelify font-semibold text-xl bg-green-400 px-2 py-1 rounded-full hover:bg-green-500 hover:scale-110 transition duration-50 shadow-lg -translate-y-2 lg:block hidden">
                 Mint
               </button>
             </li>
             <li>
-              <button className="pixelify text-xl font-semibold hover:text-white hover:scale-110 transition duration-50 -translate-y-2 lg:block hidden">
+              <button className="pixelify font-semibold text-xl bg-green-400 px-2 py-1 rounded-full hover:bg-green-500 hover:scale-110 transition duration-50 shadow-lg -translate-y-2 lg:block hidden">
                 About
               </button>
             </li>
             <li>
-              <button className="pixelify text-xl font-semibold hover:text-white hover:scale-110 transition duration-50 -translate-y-2 lg:block hidden">
+              <button className="pixelify font-semibold text-xl bg-green-400 px-2 py-1 rounded-full hover:bg-green-500 hover:scale-110 transition duration-50 shadow-lg -translate-y-2 lg:block hidden">
                 Gallery
               </button>
             </li>
             <li>
-              <button className="pixelify text-xl font-semibold hover:text-white hover:scale-110 transition duration-50 -translate-y-2 lg:block hidden">
+              <button className="pixelify font-semibold text-xl bg-green-400 px-2 py-1 rounded-full hover:bg-green-500 hover:scale-110 transition duration-50 shadow-lg -translate-y-2 lg:block hidden">
                 FAQ
               </button>
             </li>

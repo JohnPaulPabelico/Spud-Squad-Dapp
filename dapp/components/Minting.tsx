@@ -4,13 +4,13 @@ import { SiSolana } from "react-icons/si";
 import Carousel from "./Carousel";
 
 const slides = [
-  "/images/Gallery Images/1.svg",
-  "/images/Gallery Images/2.svg",
-  "/images/Gallery Images/3.svg",
-  "/images/Gallery Images/4.svg",
-  "/images/Gallery Images/5.svg",
-  "/images/Gallery Images/6.svg",
-  "/images/Gallery Images/7.svg",
+  "/Gallery Images/1.svg",
+  "/Gallery Images/2.svg",
+  "/Gallery Images/3.svg",
+  "/Gallery Images/4.svg",
+  "/Gallery Images/5.svg",
+  "/Gallery Images/6.svg",
+  "/Gallery Images/7.svg",
 ];
 
 export default function Minting() {
@@ -19,7 +19,7 @@ export default function Minting() {
       <section
         id="mint"
         style={{
-          backgroundImage: 'url("images/Assets/Dirt Tile Upscaled.png")',
+          backgroundImage: 'url("/Assets/Dirt Tile Upscaled.png")',
           backgroundRepeat: "repeat",
         }}
         className="min-h-dvh"

@@ -15,12 +15,12 @@ function NavBar() {
             barState ? "hidden" : "block"
           }`}
           style={{
-            backgroundImage: "url('/images/Assets/Grass Tile Upscaled.png')",
+            backgroundImage: "url('/Assets/Grass Tile Upscaled.png')",
           }}
         />
         <div className="relative z-10 min-h-32 flex items-center justify-between top-0 shadow-xl lg:px-10">
           <Image
-            src="/images/Assets/Mascot.png"
+            src="/Assets/Mascot.png"
             alt="logo"
             width={170}
             height={170}

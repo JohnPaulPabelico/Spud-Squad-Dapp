@@ -7,7 +7,7 @@ function Gallery() {
       <section
         id="gallery"
         style={{
-          backgroundImage: 'url("images/Assets/Dirt Tile 3 Upscaled.png")',
+          backgroundImage: 'url("/Assets/Dirt Tile 3 Upscaled.png")',
           backgroundRepeat: "repeat",
         }}
         className="min-h-dvh"
@@ -20,7 +20,7 @@ function Gallery() {
             <ul className="grid lg:grid-cols-4 grid-cols-2 justify-items-center gap-10 ">
               <li>
                 <Image
-                  src="images/Gallery Images/1.svg"
+                  src="/Gallery Images/1.svg"
                   height="150"
                   width="150"
                   alt="1"
@@ -29,7 +29,7 @@ function Gallery() {
               </li>
               <li>
                 <Image
-                  src="images/Gallery Images/2.svg"
+                  src="/Gallery Images/2.svg"
                   height="150"
                   width="150"
                   alt="2"
@@ -38,7 +38,7 @@ function Gallery() {
               </li>
               <li>
                 <Image
-                  src="images/Gallery Images/3.svg"
+                  src="/Gallery Images/3.svg"
                   height="150"
                   width="150"
                   alt="3"
@@ -47,7 +47,7 @@ function Gallery() {
               </li>
               <li>
                 <Image
-                  src="images/Gallery Images/4.svg"
+                  src="/Gallery Images/4.svg"
                   height="150"
                   width="150"
                   alt="4"
@@ -56,7 +56,7 @@ function Gallery() {
               </li>
               <li>
                 <Image
-                  src="images/Gallery Images/5.svg"
+                  src="/Gallery Images/5.svg"
                   height="150"
                   width="150"
                   alt="5"
@@ -65,7 +65,7 @@ function Gallery() {
               </li>
               <li>
                 <Image
-                  src="images/Gallery Images/6.svg"
+                  src="/Gallery Images/6.svg"
                   height="150"
                   width="150"
                   alt="6"
@@ -74,7 +74,7 @@ function Gallery() {
               </li>
               <li>
                 <Image
-                  src="images/Gallery Images/7.svg"
+                  src="/Gallery Images/7.svg"
                   height="150"
                   width="150"
                   alt="7"
@@ -83,7 +83,7 @@ function Gallery() {
               </li>
               <li>
                 <Image
-                  src="images/Gallery Images/8.svg"
+                  src="/Gallery Images/8.svg"
                   height="150"
                   width="150"
                   alt="8"
@@ -92,7 +92,7 @@ function Gallery() {
               </li>
               <li>
                 <Image
-                  src="images/Gallery Images/9.svg"
+                  src="/Gallery Images/9.svg"
                   height="150"
                   width="150"
                   alt="9"
@@ -101,7 +101,7 @@ function Gallery() {
               </li>
               <li>
                 <Image
-                  src="images/Gallery Images/10.svg"
+                  src="/Gallery Images/10.svg"
                   height="150"
                   width="150"
                   alt="10"
@@ -110,7 +110,7 @@ function Gallery() {
               </li>
               <li>
                 <Image
-                  src="images/Gallery Images/11.svg"
+                  src="/Gallery Images/11.svg"
                   height="150"
                   width="150"
                   alt="11"
@@ -119,7 +119,7 @@ function Gallery() {
               </li>
               <li>
                 <Image
-                  src="images/Gallery Images/12.svg"
+                  src="/Gallery Images/12.svg"
                   height="150"
                   width="150"
                   alt="12"

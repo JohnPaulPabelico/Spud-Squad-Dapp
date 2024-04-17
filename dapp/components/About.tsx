@@ -10,7 +10,7 @@ function Landing() {
       <section
         id="about"
         style={{
-          backgroundImage: 'url("images/Assets/Dirt Tile 2 Upscaled.png")',
+          backgroundImage: 'url("/Assets/Dirt Tile 2 Upscaled.png")',
           backgroundRepeat: "repeat",
         }}
         className="min-h-dvh"

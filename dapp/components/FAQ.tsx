@@ -8,7 +8,7 @@ function FAQ() {
       <section
         id="faq"
         style={{
-          backgroundImage: 'url("images/Assets/Stone Tile Upscaled.png")',
+          backgroundImage: 'url("/Assets/Stone Tile Upscaled.png")',
           backgroundRepeat: "repeat",
         }}
         className="min-h-dvh"

@@ -10,7 +10,7 @@ function Footer() {
         id="footer"
         className="min-h-32 bg-gray-900 flex justify-between items-center px-10"
         style={{
-          backgroundImage: 'url("images/Assets/Stone Footer.png")',
+          backgroundImage: 'url("/Assets/Stone Footer.png")',
           backgroundRepeat: "repeat",
         }}
       >

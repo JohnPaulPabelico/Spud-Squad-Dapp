@@ -14,26 +14,23 @@ export default function Home() {
       <Minting />
       <div
         style={{
-          backgroundImage: 'url("images/Dirt Joiner 1 Upscaled.png")',
-          backgroundRepeat: "repeat",
+          backgroundImage: 'url("images/Assets/Dirt Joiner 1 Upscaled.png")',
         }}
-        className="min-h-32"
+        className="min-h-32 bg-repeat"
       ></div>
       <About />
       <div
         style={{
-          backgroundImage: 'url("images/Dirt Joiner 2 Upscaled.png")',
-          backgroundRepeat: "repeat",
+          backgroundImage: 'url("images/Assets/Dirt Joiner 2 Upscaled.png")',
         }}
-        className="min-h-32"
+        className="min-h-32 bg-repeat"
       ></div>
       <Gallery />
       <div
         style={{
-          backgroundImage: 'url("images/Dirt Joiner 3 Upscaled.png")',
-          backgroundRepeat: "repeat",
+          backgroundImage: 'url("images/Assets/Dirt Joiner 3 Upscaled.png")',
         }}
-        className="min-h-32"
+        className="min-h-32 bg-repeat"
       ></div>
       <FAQ />
       <Footer />

@@ -1,7 +1,6 @@
 import Image from "next/image";
 import React, { useState } from "react";
-import { FaBars } from "react-icons/fa";
-import { GrClose } from "react-icons/gr";
+import { SiSolana } from "react-icons/si";
 import Carousel from "./Carousel";
 
 const slides = [
@@ -20,7 +19,7 @@ export default function Minting() {
       <section
         id="mint"
         style={{
-          backgroundImage: 'url("images/Dirt Tile Upscaled.png")',
+          backgroundImage: 'url("images/Assets/Dirt Tile Upscaled.png")',
           backgroundRepeat: "repeat",
         }}
         className="min-h-dvh"
@@ -39,8 +38,22 @@ export default function Minting() {
               ))}
             </Carousel>
           </div>
-          <div className="pixelify text-3xl lg:text-5xl text-bold bg-amber-500 rounded-3xl p-10  lg:min-h-[384px] min-w-[384px] lg:max-w-[481.281px] text-center">
-            Mint a Spud Mate
+          <div className=" bg-amber-500 rounded-3xl p-10  lg:min-h-[384px] min-h-[340px] min-w-[384px] lg:max-w-[481.281px] text-center">
+            <div className="pixelify text-3xl lg:text-5xl text-bold text-center">
+              Mint a Spud Mate
+            </div>
+            <div className="pixelify text-lg lg:text-2xl text-bold text-center">
+              Join the Spud Squad now!
+            </div>
+            <div className="flex items-center justify-center pixelify text-2xl lg:text-3xl text-bold text-center py-3 translate-y-6">
+              Cost: 0.01 SOL <SiSolana className="ml-5" />
+            </div>
+            <button className="pixelify text-3xl lg:text-3xl text-bold py-2 px-4 bg-green-500 rounded-full text-center hover:bg-green-600 hover:scale-110 transition translate-y-12">
+              Mint
+            </button>
+            <div className="pixelify text-3xl lg:text-3xl text-bold py-2 px-4 text-center  translate-y-12">
+              0/999
+            </div>
           </div>
         </div>
       </section>

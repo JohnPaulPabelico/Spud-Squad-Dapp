@@ -56,6 +56,7 @@ export default function Minting() {
             </div>
           </div>
         </div>
+        <div className="p-32 lg:p-0"></div>
       </section>
     </div>
   );

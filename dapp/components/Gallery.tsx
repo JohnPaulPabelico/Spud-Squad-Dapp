@@ -16,8 +16,8 @@ function Gallery() {
           Gallery
         </div>
         <div>
-          <div className="lg:w-2/5 mx-auto">
-            <ul className="grid lg:grid-cols-4 grid-cols-3 justify-items-center gap-y-10">
+          <div className="lg:w-1/2 mx-auto">
+            <ul className="grid lg:grid-cols-4 grid-cols-2 justify-items-center gap-10 ">
               <li>
                 <Image
                   src="images/Gallery Images/1.svg"
@@ -129,6 +129,7 @@ function Gallery() {
             </ul>
           </div>
         </div>
+        <div className="p-16"></div>
       </section>
     </div>
   );

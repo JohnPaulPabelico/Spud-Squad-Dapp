@@ -19,7 +19,7 @@ function Landing() {
         <div className="pixelify text-5xl px-4 py-16 flex justify-center text-white items-center text-center">
           About Us
         </div>
-        <div className="pixelify text-xl px-16 bg-amber-600 mx-32 py-16 flex justify-center text-white items-center text-justify rounded-lg">
+        <div className="pixelify text-xl px-8 lg:px-16 bg-amber-600 lg:mx-32 mx-10 py-16 flex justify-center text-white items-center text-justify rounded-lg">
           Welcome to the enchanting world of Spud Squads, where potato pals take
           center stage! Originating from a dimension beyond our own, these
           delightful characters have made their debut on the Solana network,
@@ -52,12 +52,12 @@ function Landing() {
         <div className="flex justify-center translate-y-24">
           <Link
             href="#mint"
-            className="pixelify font-bold text-4xl bg-green-400 px-4 py-2 rounded-full hover:bg-green-500 hover:scale-110 transition duration-50 shadow-lg -translate-y-2 lg:block hidden"
+            className="pixelify font-bold text-4xl bg-green-400 px-4 py-2 rounded-full hover:bg-green-500 hover:scale-110 transition duration-50 shadow-lg -translate-y-2"
           >
             Mint Now
           </Link>
         </div>
-        <div className="p-10"></div>
+        <div className="p-16"></div>
       </section>
     </div>
   );

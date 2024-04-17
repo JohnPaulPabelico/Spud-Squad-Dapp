@@ -14,7 +14,7 @@ function Footer() {
           backgroundRepeat: "repeat",
         }}
       >
-        <div className="text-2xl text-white font-bold titillium ">
+        <div className="pixelify text-xl text-white font-bold titillium ">
           Copyright © 2024. All rights are reserved
         </div>
         <div className="flex justify-center lg:justify-start text-4xl text-white">

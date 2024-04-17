@@ -18,9 +18,9 @@ function NavBar() {
             backgroundImage: "url('/images/Assets/Grass Tile Upscaled.png')",
           }}
         />
-        <div className="relative z-10 min-h-32 flex items-center justify-between top-0 shadow-xl px-10">
+        <div className="relative z-10 min-h-32 flex items-center justify-between top-0 shadow-xl lg:px-10">
           <Image
-            src="/images/Mascot.png"
+            src="/images/Assets/Mascot.png"
             alt="logo"
             width={170}
             height={170}
@@ -97,24 +97,52 @@ function NavBar() {
             </button>
           </li>
           <li>
-            <button className="pixelify text-4xl font-semibold hover:text-white hover:scale-110 transition duration-50">
+            <Link
+              href="#mint"
+              className="pixelify text-4xl font-semibold hover:text-white hover:scale-110 transition duration-50"
+              onClick={() => {
+                setBarState(!barState);
+                console.log(barState);
+              }}
+            >
               Mint
-            </button>
+            </Link>
           </li>
           <li>
-            <button className="pixelify text-4xl font-semibold hover:text-white hover:scale-110 transition duration-50">
+            <Link
+              href="#about"
+              className="pixelify text-4xl font-semibold hover:text-white hover:scale-110 transition duration-50"
+              onClick={() => {
+                setBarState(!barState);
+                console.log(barState);
+              }}
+            >
               About
-            </button>
+            </Link>
           </li>
           <li>
-            <button className="pixelify text-4xl font-semibold hover:text-white hover:scale-110 transition duration-50">
+            <Link
+              href="#gallery"
+              className="pixelify text-4xl font-semibold hover:text-white hover:scale-110 transition duration-50"
+              onClick={() => {
+                setBarState(!barState);
+                console.log(barState);
+              }}
+            >
               Gallery
-            </button>
+            </Link>
           </li>
           <li>
-            <button className="pixelify text-4xl font-semibold hover:text-white hover:scale-110 transition duration-50">
+            <Link
+              href="#faq"
+              className="pixelify text-4xl font-semibold hover:text-white hover:scale-110 transition duration-50"
+              onClick={() => {
+                setBarState(!barState);
+                console.log(barState);
+              }}
+            >
               FAQ
-            </button>
+            </Link>
           </li>
         </ul>
       </div>

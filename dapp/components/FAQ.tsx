@@ -6,7 +6,7 @@ function FAQ() {
   return (
     <div>
       <section
-        id="about"
+        id="faq"
         style={{
           backgroundImage: 'url("images/Assets/Stone Tile Upscaled.png")',
           backgroundRepeat: "repeat",

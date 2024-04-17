@@ -1,7 +1,7 @@
 import Image from "next/image";
-import { IoLogoGithub } from "react-icons/io";
-import { FaLinkedin } from "react-icons/fa";
 import React, { useContext } from "react";
+import { SiOpensea } from "react-icons/si";
+import { SiTwitter } from "react-icons/si";
 function Footer() {
   return (
     <div>
@@ -9,6 +9,10 @@ function Footer() {
       <section
         id="footer"
         className="min-h-32 bg-gray-900 flex justify-between items-center px-10"
+        style={{
+          backgroundImage: 'url("images/Stone Footer.png")',
+          backgroundRepeat: "repeat",
+        }}
       >
         <div className="text-2xl text-white font-bold titillium ">
           Copyright © 2024. All rights are reserved
@@ -20,7 +24,7 @@ function Footer() {
             rel="noopener noreferrer"
             className="hover:text-blue-500 transition duration-300"
           >
-            <IoLogoGithub />
+            <SiTwitter />
           </a>
           <a
             href="linkedin.com/in/jp-pabelico/"
@@ -28,7 +32,7 @@ function Footer() {
             rel="noopener noreferrer"
             className="hover:text-blue-500 transition duration-300 lg:ml-5 ml-3"
           >
-            <FaLinkedin />
+            <SiOpensea />
           </a>
         </div>
       </section>

@@ -17,8 +17,15 @@ const slides = [
 export default function Minting() {
   return (
     <div className="">
-      <section id="mint" className="bg-amber-700 min-h-dvh">
-        <div className=" flex translate-y-64 justify-center gap-5">
+      <section
+        id="mint"
+        style={{
+          backgroundImage: 'url("images/Dirt Tile Upscaled.png")',
+          backgroundRepeat: "repeat",
+        }}
+        className="min-h-dvh"
+      >
+        <div className="flex lg:flex-row flex-col items-center lg:translate-y-64 translate-y-48 justify-center gap-5">
           <div className="max-w-sm shadow-lg">
             <Carousel autoSlide={true}>
               {slides.map((s, index) => (
@@ -32,9 +39,8 @@ export default function Minting() {
               ))}
             </Carousel>
           </div>
-          <div className=" bg-black bg-opacity-30 rounded-3xl p-10">
-            Mint Panel
-            <button>Mint</button>
+          <div className="pixelify text-3xl lg:text-5xl text-bold bg-amber-500 rounded-3xl p-10  lg:min-h-[384px] min-w-[384px] lg:max-w-[481.281px] text-center">
+            Mint a Spud Mate
           </div>
         </div>
       </section>

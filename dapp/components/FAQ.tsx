@@ -6,7 +6,14 @@ import { GrClose } from "react-icons/gr";
 function FAQ() {
   return (
     <div>
-      <section id="faq" className="bg-slate-700 min-h-dvh "></section>
+      <section
+        id="about"
+        style={{
+          backgroundImage: 'url("images/Stone Tile Upscaled.png")',
+          backgroundRepeat: "repeat",
+        }}
+        className="min-h-dvh"
+      ></section>
     </div>
   );
 }

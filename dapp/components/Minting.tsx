@@ -17,9 +17,9 @@ const slides = [
 export default function Minting() {
   return (
     <div className="">
-      <section className="bg-amber-700 min-h-dvh">
-        <div className=" flex translate-y-80 justify-center gap-5">
-          <div className="max-w-sm">
+      <section id="mint" className="bg-amber-700 min-h-dvh">
+        <div className=" flex translate-y-64 justify-center gap-5">
+          <div className="max-w-sm shadow-lg">
             <Carousel autoSlide={true}>
               {slides.map((s, index) => (
                 <Image

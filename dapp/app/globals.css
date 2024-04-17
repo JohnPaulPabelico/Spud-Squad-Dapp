@@ -5,3 +5,7 @@
 .pixelify {
   font-family: var(--font-pixelify-sans);
 }
+
+html {
+  scroll-behavior: smooth;
+}

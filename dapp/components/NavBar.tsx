@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React, { useState } from "react";
 import { FaBars } from "react-icons/fa";
 import { GrClose } from "react-icons/gr";
@@ -25,24 +26,36 @@ function NavBar() {
           />
           <ul className="flex gap-10">
             <li>
-              <button className="pixelify font-semibold text-xl bg-green-400 px-2 py-1 rounded-full hover:bg-green-500 hover:scale-110 transition duration-50 shadow-lg -translate-y-2 lg:block hidden">
+              <Link
+                href="#mint"
+                className="pixelify font-semibold text-xl bg-green-400 px-2 py-1 rounded-full hover:bg-green-500 hover:scale-110 transition duration-50 shadow-lg -translate-y-2 lg:block hidden"
+              >
                 Mint
-              </button>
+              </Link>
             </li>
             <li>
-              <button className="pixelify font-semibold text-xl bg-green-400 px-2 py-1 rounded-full hover:bg-green-500 hover:scale-110 transition duration-50 shadow-lg -translate-y-2 lg:block hidden">
+              <Link
+                href="#about"
+                className="pixelify font-semibold text-xl bg-green-400 px-2 py-1 rounded-full hover:bg-green-500 hover:scale-110 transition duration-50 shadow-lg -translate-y-2 lg:block hidden"
+              >
                 About
-              </button>
+              </Link>
             </li>
             <li>
-              <button className="pixelify font-semibold text-xl bg-green-400 px-2 py-1 rounded-full hover:bg-green-500 hover:scale-110 transition duration-50 shadow-lg -translate-y-2 lg:block hidden">
+              <Link
+                href="#gallery"
+                className="pixelify font-semibold text-xl bg-green-400 px-2 py-1 rounded-full hover:bg-green-500 hover:scale-110 transition duration-50 shadow-lg -translate-y-2 lg:block hidden"
+              >
                 Gallery
-              </button>
+              </Link>
             </li>
             <li>
-              <button className="pixelify font-semibold text-xl bg-green-400 px-2 py-1 rounded-full hover:bg-green-500 hover:scale-110 transition duration-50 shadow-lg -translate-y-2 lg:block hidden">
+              <Link
+                href="#faq"
+                className="pixelify font-semibold text-xl bg-green-400 px-2 py-1 rounded-full hover:bg-green-500 hover:scale-110 transition duration-50 shadow-lg -translate-y-2 lg:block hidden"
+              >
                 FAQ
-              </button>
+              </Link>
             </li>
             <li
               className={`m-3 text-3xl cursor-pointer  bg-yellow-400 p-4 rounded-full hover:bg-yellow-500 transition duration-200 lg:hidden -translate-y-2"

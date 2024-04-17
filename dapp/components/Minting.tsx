@@ -5,13 +5,13 @@ import { GrClose } from "react-icons/gr";
 import Carousel from "./Carousel";
 
 const slides = [
-  "/images/Gallery Images/1.png",
-  "/images/Gallery Images/2.png",
-  "/images/Gallery Images/3.png",
-  "/images/Gallery Images/4.png",
-  "/images/Gallery Images/5.png",
-  "/images/Gallery Images/6.png",
-  "/images/Gallery Images/7.png",
+  "/images/Gallery Images/1.svg",
+  "/images/Gallery Images/2.svg",
+  "/images/Gallery Images/3.svg",
+  "/images/Gallery Images/4.svg",
+  "/images/Gallery Images/5.svg",
+  "/images/Gallery Images/6.svg",
+  "/images/Gallery Images/7.svg",
 ];
 
 export default function Minting() {

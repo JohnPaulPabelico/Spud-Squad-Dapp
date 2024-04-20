@@ -36,21 +36,25 @@ export default function Minting() {
   const [candyMachineData, setCandyMachineData] = useState<CandyMachine | null>(
     null
   );
+  const [itemsRedeemed, setItemsRedeemed] = useState<number | null>(null);
 
   useEffect(() => {
-    async function fetchData() {
+    const fetchData = async () => {
       try {
         const umi = createUmi(quicknodeEndpoint);
-        const context = { rpc: umi };
         const candyMachine = await fetchCandyMachine(umi, candyMachineAddress);
         setCandyMachineData(candyMachine);
-        console.log(candyMachine);
-        console.log(Number(candyMachine.itemsRedeemed));
+        setItemsRedeemed(Number(candyMachine.itemsRedeemed));
       } catch (error) {
         console.error("Error fetching candy machine:", error);
       }
-    }
+    };
+
     fetchData();
+
+    const interval = setInterval(fetchData, 5000); // Fetch data every 5 seconds
+
+    return () => clearInterval(interval); // Clean up the interval on component unmount
   }, []);
 
   return (
@@ -88,10 +92,11 @@ export default function Minting() {
               Cost: 0.01 SOL
             </div>
             <CandyMint />
-            {candyMachineData && ( // Check if candy machine data is available
-              <div className="pixelify text-3xl lg:text-3xl text-bold py-2 px-4 text-center  translate-y-12">
-                {Number(candyMachineData.itemsRedeemed)}/
-                {candyMachineData.itemsLoaded}
+            {candyMachineData && (
+              <div className="pixelify text-3xl lg:text-3xl text-bold py-2 px-4 text-center translate-y-12">
+                {itemsRedeemed !== null
+                  ? `${itemsRedeemed}/${candyMachineData.itemsLoaded}`
+                  : "Loading..."}
               </div>
             )}
           </div>

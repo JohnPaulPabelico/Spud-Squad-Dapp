@@ -81,7 +81,7 @@ export default function Minting() {
               ))}
             </Carousel>
           </div>
-          <div className=" bg-amber-500 rounded-3xl p-10  lg:min-h-[384px] min-h-[340px] min-w-[384px] lg:max-w-[481.281px] text-center">
+          <div className=" bg-amber-500 rounded-3xl p-10  lg:min-h-[384px] min-h-[340px] max-w-[384px] lg:min-w-[384px] lg:max-w-[481.281px] text-center">
             <div className="pixelify text-3xl lg:text-5xl text-bold text-center">
               Mint a Spud Mate
             </div>

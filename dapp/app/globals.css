@@ -11,7 +11,7 @@ html {
 }
 
 .custom-wallet-button {
-  background-color: #FBBF24;
+  background-color: #fbbf24;
   border-radius: 9999px;
   font-family: var(--font-pixelify-sans);
   color: black;
@@ -20,5 +20,18 @@ html {
 }
 
 .custom-wallet-button:hover {
-  background-color: #F59E0B;
+  background-color: #f59e0b;
+}
+
+.fade-in {
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

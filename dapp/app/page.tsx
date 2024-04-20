@@ -1,4 +1,12 @@
 "use client";
+import { useEffect, useState, useMemo } from "react";
+import {
+  ConnectionProvider,
+  WalletProvider,
+} from "@solana/wallet-adapter-react";
+import { WalletModalProvider } from "@solana/wallet-adapter-react-ui";
+require("@solana/wallet-adapter-react-ui/styles.css");
+import * as web3 from "@solana/web3.js";
 
 import NavBar from "../components/NavBar";
 import Minting from "../components/Minting";
@@ -6,42 +14,57 @@ import About from "../components/About";
 import Gallery from "../components/Gallery";
 import FAQ from "../components/FAQ";
 import Footer from "../components/Footer";
-import Head from "next/head";
 
 export default function Home() {
+  const [rendered, setrendered] = useState(false);
+
+  useEffect(() => {
+    setrendered(true);
+  }, [setrendered]);
+
+  const endpoint = web3.clusterApiUrl("devnet");
+  const wallets = useMemo(() => [], []);
+
   return (
     <main>
-      <Head>
-        <title>Spud Squad</title>
-        <meta
-          name="dOfficial website of the Spud Squadescription"
-          content="Spud Squad"
-        />
-      </Head>
-      <NavBar />
-      <Minting />
-      <div
-        style={{
-          backgroundImage: 'url("/Assets/Dirt Joiner 1 Upscaled.png")',
-        }}
-        className="min-h-32 bg-repeat"
-      ></div>
-      <About />
-      <div
-        style={{
-          backgroundImage: 'url("/Assets/Dirt Joiner 2 Upscaled.png")',
-        }}
-        className="min-h-32 bg-repeat"
-      ></div>
-      <Gallery />
-      <div
-        style={{
-          backgroundImage: 'url("/Assets/Dirt Joiner 3 Upscaled.png")',
-        }}
-        className="min-h-32 bg-repeat"
-      ></div>
-      <FAQ />
-      <Footer />
+      {rendered && (
+        <ConnectionProvider endpoint={endpoint}>
+          <WalletProvider wallets={wallets} autoConnect>
+            <WalletModalProvider>
+              <div>
+                {" "}
+                <NavBar />
+                <Minting />
+                <div
+                  style={{
+                    backgroundImage:
+                      'url("/Assets/Dirt Joiner 1 Upscaled.png")',
+                  }}
+                  className="min-h-32 bg-repeat"
+                ></div>
+                <About />
+                <div
+                  style={{
+                    backgroundImage:
+                      'url("/Assets/Dirt Joiner 2 Upscaled.png")',
+                  }}
+                  className="min-h-32 bg-repeat"
+                ></div>
+                <Gallery />
+                <div
+                  style={{
+                    backgroundImage:
+                      'url("/Assets/Dirt Joiner 3 Upscaled.png")',
+                  }}
+                  className="min-h-32 bg-repeat"
+                ></div>
+                <FAQ />
+                <Footer />
+              </div>
+            </WalletModalProvider>
+          </WalletProvider>
+        </ConnectionProvider>
+      )}
     </main>
   );
 }

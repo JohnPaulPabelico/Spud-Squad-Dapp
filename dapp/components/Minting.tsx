@@ -12,7 +12,7 @@ import {
 import { walletAdapterIdentity } from "@metaplex-foundation/umi-signer-wallet-adapters";
 import { mplTokenMetadata } from "@metaplex-foundation/mpl-token-metadata";
 import { clusterApiUrl } from "@solana/web3.js";
-const slides = [
+const spudslides = [
   "/Gallery Images/1.svg",
   "/Gallery Images/2.svg",
   "/Gallery Images/3.svg",
@@ -70,7 +70,7 @@ export default function Minting() {
         <div className="flex lg:flex-row flex-col items-center lg:translate-y-64 translate-y-48 justify-center gap-5">
           <div className="max-w-sm shadow-lg">
             <Carousel autoSlide={true}>
-              {slides.map((s, index) => (
+              {spudslides.map((s, index) => (
                 <Image
                   key={index}
                   alt="slides"

@@ -6,10 +6,18 @@ import About from "../components/About";
 import Gallery from "../components/Gallery";
 import FAQ from "../components/FAQ";
 import Footer from "../components/Footer";
+import Head from "next/head";
 
 export default function Home() {
   return (
     <main>
+      <Head>
+        <title>Spud Squad</title>
+        <meta
+          name="dOfficial website of the Spud Squadescription"
+          content="Spud Squad"
+        />
+      </Head>
       <NavBar />
       <Minting />
       <div

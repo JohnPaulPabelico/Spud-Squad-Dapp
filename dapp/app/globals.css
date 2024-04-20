@@ -9,3 +9,16 @@
 html {
   scroll-behavior: smooth;
 }
+
+.custom-wallet-button {
+  background-color: #FBBF24;
+  border-radius: 9999px;
+  font-family: var(--font-pixelify-sans);
+  color: black;
+  font-size: 1.25rem;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.custom-wallet-button:hover {
+  background-color: #F59E0B;
+}

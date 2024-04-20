@@ -3,13 +3,13 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { FaBars } from "react-icons/fa";
 import { GrClose } from "react-icons/gr";
-
+import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
 function NavBar() {
   const [barState, setBarState] = useState(false);
 
   return (
     <div>
-      <div className={`absolute w-full overflow-hidden top-0 left-0`}>
+      <div className={`absolute w-full top-0 left-0`}>
         <div
           className={`absolute inset-0 z-0 bg-repeat ${
             barState ? "hidden" : "block"
@@ -18,7 +18,7 @@ function NavBar() {
             backgroundImage: "url('/Assets/Grass Tile Upscaled.png')",
           }}
         />
-        <div className="relative z-10 min-h-32 flex items-center justify-between top-0 shadow-xl lg:px-10">
+        <div className="relative z-10 min-h-32 flex items-center justify-between top-0 lg:px-10">
           <Image
             src="/Assets/Mascot.png"
             alt="logo"
@@ -80,9 +80,21 @@ function NavBar() {
               )}
             </li>
           </ul>
-          <button className="pixelify font-semibold text-xl bg-yellow-400 px-4 py-2 rounded-full hover:bg-yellow-500 transition duration-50 shadow-lg -translate-y-2 lg:block hidden">
+          <div className="z-999 lg:block hidden ">
+            <WalletMultiButton
+              style={{
+                backgroundColor: "#FBBF24",
+                borderRadius: "9999px",
+                fontFamily: "var(--font-pixelify-sans)",
+                color: "black",
+                fontSize: "1.25rem",
+                transform: "translateY(-0.5rem)",
+              }}
+            />
+          </div>
+          {/* <button className="pixelify font-semibold text-xl bg-yellow-400 px-4 py-2 rounded-full hover:bg-yellow-500 transition duration-50 shadow-lg -translate-y-2 lg:block hidden">
             Connect Wallet
-          </button>
+          </button>{" "} */}
         </div>
       </div>
       <div
@@ -92,9 +104,18 @@ function NavBar() {
       >
         <ul className="flex flex-col gap-10">
           <li>
-            <button className="pixelify font-semibold text-4xl bg-yellow-400 px-4 py-3 rounded-full hover:bg-yellow-500 transition duration-50 shadow-lg -translate-y-2">
-              Connect Wallet
-            </button>
+            <div className="z-999">
+              <WalletMultiButton
+                style={{
+                  backgroundColor: "#FBBF24",
+                  borderRadius: "9999px",
+                  fontFamily: "var(--font-pixelify-sans)",
+                  color: "black",
+                  fontSize: "2.25rem",
+                  transform: "translateY(-0.5rem)",
+                }}
+              />
+            </div>
           </li>
           <li>
             <Link

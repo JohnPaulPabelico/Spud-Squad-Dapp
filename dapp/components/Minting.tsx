@@ -2,6 +2,7 @@ import Image from "next/image";
 import React, { useState } from "react";
 import { SiSolana } from "react-icons/si";
 import Carousel from "./Carousel";
+import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
 
 const slides = [
   "/Gallery Images/1.svg",
@@ -15,7 +16,7 @@ const slides = [
 
 export default function Minting() {
   return (
-    <div className="">
+    <div className="z-1">
       <section
         id="mint"
         style={{
@@ -46,7 +47,7 @@ export default function Minting() {
               Join the Spud Squad now!
             </div>
             <div className="flex items-center justify-center pixelify text-2xl lg:text-3xl text-bold text-center py-3 translate-y-6">
-              Cost: 0.01 SOL <SiSolana className="ml-5" />
+              Cost: 0.01 SOL
             </div>
             <button className="pixelify text-3xl lg:text-3xl text-bold py-2 px-4 bg-green-500 rounded-full text-center hover:bg-green-600 hover:scale-110 transition translate-y-12">
               Mint
@@ -54,6 +55,7 @@ export default function Minting() {
             <div className="pixelify text-3xl lg:text-3xl text-bold py-2 px-4 text-center  translate-y-12">
               0/999
             </div>
+            {/* <WalletMultiButton /> */}
           </div>
         </div>
         <div className="p-32 lg:p-0"></div>

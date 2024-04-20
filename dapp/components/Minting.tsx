@@ -92,11 +92,15 @@ export default function Minting() {
               Cost: 0.01 SOL
             </div>
             <CandyMint />
-            {candyMachineData && (
-              <div className="pixelify text-3xl lg:text-3xl text-bold py-2 px-4 text-center translate-y-12">
+            {candyMachineData ? (
+              <div className="pixelify text-3xl lg:text-3xl text-bold py-2 px-4 text-center translate-y-12 mt-2">
                 {itemsRedeemed !== null
                   ? `${itemsRedeemed}/${candyMachineData.itemsLoaded}`
                   : "Loading..."}
+              </div>
+            ) : (
+              <div className="pixelify text-3xl lg:text-3xl text-bold py-2 px-4 text-center translate-y-12">
+                Loading...
               </div>
             )}
           </div>

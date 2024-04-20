@@ -21,21 +21,18 @@ import * as bs58 from "bs58";
 import Link from "next/link";
 import { IoIosClose } from "react-icons/io";
 
-// These access the environment variables we defined in the .env file
-const quicknodeEndpoint =
-  process.env.NEXT_PUBLIC_RPC || clusterApiUrl("devnet");
+const ENDPOINT = process.env.NEXT_PUBLIC_RPC || clusterApiUrl("devnet");
 const candyMachineAddress = publicKey(
   process.env.NEXT_PUBLIC_CANDY_MACHINE_ID ?? ""
 );
 const treasury = publicKey(process.env.NEXT_PUBLIC_TREASURY ?? "");
 
 export const CandyMint: FC = () => {
-  const { connection } = useConnection();
   const wallet = useWallet();
   const [successMessage, setSuccessMessage] = useState<string | null>(null);
 
   const umi = useMemo(() => {
-    return createUmi(process.env.NEXT_PUBLIC_RPC || clusterApiUrl("devnet"))
+    return createUmi(ENDPOINT)
       .use(walletAdapterIdentity(wallet))
       .use(mplCandyMachine())
       .use(mplTokenMetadata());
@@ -54,7 +51,6 @@ export const CandyMint: FC = () => {
       candyMachine.mintAuthority
     );
     try {
-      // Mint from the Candy Machine.
       const nftMint = generateSigner(umi);
       const transaction = await transactionBuilder()
         .add(setComputeUnitLimit(umi, { units: 800_000 }))
@@ -97,7 +93,6 @@ export const CandyMint: FC = () => {
         )}
         {successMessage && (
           <>
-            {/* Background overlay */}
             <div className="fixed top-0 left-0 right-0 bottom-0 h-screen z-10"></div>
             <div
               className="fixed top-0 left-0 right-0 z-20 flex items-center justify-center transition-all fade-in pt-[76px]" // Added padding-top to account for navigation bar

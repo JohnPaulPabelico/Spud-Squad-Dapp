@@ -98,7 +98,7 @@ export const CandyMint: FC = () => {
         {successMessage && (
           <>
             {/* Background overlay */}
-            <div className="fixed top-0 left-0 right-0 bottom-0 h-screen w-screen z-10"></div>
+            <div className="fixed top-0 left-0 right-0 bottom-0 h-screen z-10"></div>
             <div
               className="fixed top-0 left-0 right-0 z-20 flex items-center justify-center transition-all fade-in pt-[76px]" // Added padding-top to account for navigation bar
             >

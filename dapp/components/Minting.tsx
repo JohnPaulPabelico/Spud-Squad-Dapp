@@ -1,9 +1,17 @@
 import Image from "next/image";
-import React, { useState } from "react";
-import { SiSolana } from "react-icons/si";
+import { useWallet } from "@solana/wallet-adapter-react";
+import { useMemo, useEffect, useState } from "react";
 import Carousel from "./Carousel";
-import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
-
+import { CandyMint } from "./CandyMint";
+import { createUmi } from "@metaplex-foundation/umi-bundle-defaults";
+import { publicKey } from "@metaplex-foundation/umi";
+import {
+  fetchCandyMachine,
+  mplCandyMachine,
+} from "@metaplex-foundation/mpl-candy-machine";
+import { walletAdapterIdentity } from "@metaplex-foundation/umi-signer-wallet-adapters";
+import { mplTokenMetadata } from "@metaplex-foundation/mpl-token-metadata";
+import { clusterApiUrl } from "@solana/web3.js";
 const slides = [
   "/Gallery Images/1.svg",
   "/Gallery Images/2.svg",
@@ -14,7 +22,37 @@ const slides = [
   "/Gallery Images/7.svg",
 ];
 
+import { CandyMachine } from "@metaplex-foundation/mpl-candy-machine";
+
+const quicknodeEndpoint =
+  process.env.NEXT_PUBLIC_RPC || clusterApiUrl("devnet");
+const candyMachineAddress = publicKey(
+  process.env.NEXT_PUBLIC_CANDY_MACHINE_ID ?? ""
+);
+
 export default function Minting() {
+  const wallet = useWallet();
+
+  const [candyMachineData, setCandyMachineData] = useState<CandyMachine | null>(
+    null
+  );
+
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const umi = createUmi(quicknodeEndpoint);
+        const context = { rpc: umi };
+        const candyMachine = await fetchCandyMachine(umi, candyMachineAddress);
+        setCandyMachineData(candyMachine);
+        console.log(candyMachine);
+        console.log(Number(candyMachine.itemsRedeemed));
+      } catch (error) {
+        console.error("Error fetching candy machine:", error);
+      }
+    }
+    fetchData();
+  }, []);
+
   return (
     <div className="z-1">
       <section
@@ -49,13 +87,13 @@ export default function Minting() {
             <div className="flex items-center justify-center pixelify text-2xl lg:text-3xl text-bold text-center py-3 translate-y-6">
               Cost: 0.01 SOL
             </div>
-            <button className="pixelify text-3xl lg:text-3xl text-bold py-2 px-4 bg-green-500 rounded-full text-center hover:bg-green-600 hover:scale-110 transition translate-y-12">
-              Mint
-            </button>
-            <div className="pixelify text-3xl lg:text-3xl text-bold py-2 px-4 text-center  translate-y-12">
-              0/999
-            </div>
-            {/* <WalletMultiButton /> */}
+            <CandyMint />
+            {candyMachineData && ( // Check if candy machine data is available
+              <div className="pixelify text-3xl lg:text-3xl text-bold py-2 px-4 text-center  translate-y-12">
+                {Number(candyMachineData.itemsRedeemed)}/
+                {candyMachineData.itemsLoaded}
+              </div>
+            )}
           </div>
         </div>
         <div className="p-32 lg:p-0"></div>

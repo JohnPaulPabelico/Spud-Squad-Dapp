@@ -181,9 +181,9 @@ const NavBar: FC<NavBarProps> = ({ successMessage }) => {
         overflow: hidden;
       }
     `}</style>
-          <div className="fixed top-0 left-0 right-0 z-20 flex items-center justify-center transition-all fade-in pt-[76px] bg-black bg-opacity-50 min-h-dvh">
+          <div className="fixed top-0 left-0 right-0 z-20 flex items-center justify-center transition-all fade-in pt-[76px] bg-black bg-opacity-30 min-h-dvh">
             <div className="flex items-center justify-center ">
-              <div className="bg-amber-300 p-10 rounded-lg max-w-[384px] lg:max-w-[520.281px] -translate-y-24">
+              <div className="bg-amber-300 p-10 rounded-lg max-w-[384px] lg:max-w-[520.281px] -translate-y-24 drop-shadow-2xl">
                 <IoIosClose
                   className="text-5xl ml-auto cursor-pointer hover:text-white translate-x-5 -translate-y-5 transition"
                   onClick={() => {
@@ -193,7 +193,7 @@ const NavBar: FC<NavBarProps> = ({ successMessage }) => {
                 <p className="pixelify lg:text-5xl text-4xl -translate-y-8 text-center">
                   Congratulations
                 </p>
-                <p className="lg:text-3xl text-xl mt-3 pixelify -translate-y-8 text-center">
+                <p className="lg:text-3xl text-xl mt-3 pixelify -translate-y-8 text-center ">
                   You have minted a Spud Mate!
                 </p>
                 <Link

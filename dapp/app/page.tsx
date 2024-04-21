@@ -17,6 +17,7 @@ import Footer from "../components/Footer";
 
 export default function Home() {
   const [rendered, setrendered] = useState(false);
+  const [successMessage, setSuccessMessage] = useState<string | null>(null);
 
   useEffect(() => {
     setrendered(true);
@@ -33,8 +34,8 @@ export default function Home() {
             <WalletModalProvider>
               <div>
                 {" "}
-                <NavBar />
-                <Minting />
+                <NavBar successMessage={successMessage} />
+                <Minting setSuccessMessage={setSuccessMessage} />
                 <div
                   style={{
                     backgroundImage:

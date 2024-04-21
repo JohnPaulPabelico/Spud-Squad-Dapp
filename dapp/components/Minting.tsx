@@ -22,6 +22,10 @@ const spudslides = [
   "/Gallery Images/7.svg",
 ];
 
+interface MintingProps {
+  setSuccessMessage: (message: string | null) => void;
+}
+
 import { CandyMachine } from "@metaplex-foundation/mpl-candy-machine";
 
 const quicknodeEndpoint =
@@ -30,7 +34,7 @@ const candyMachineAddress = publicKey(
   process.env.NEXT_PUBLIC_CANDY_MACHINE_ID ?? ""
 );
 
-export default function Minting() {
+export default function Minting({ setSuccessMessage }: MintingProps) {
   const wallet = useWallet();
 
   const [candyMachineData, setCandyMachineData] = useState<CandyMachine | null>(
@@ -91,7 +95,7 @@ export default function Minting() {
             <div className="flex items-center justify-center pixelify text-2xl lg:text-3xl text-bold text-center py-3 translate-y-6">
               Cost: 0.01 SOL
             </div>
-            <CandyMint />
+            <CandyMint setSuccessMessage={setSuccessMessage} />
             {candyMachineData ? (
               <div className="pixelify text-3xl lg:text-3xl text-bold py-2 px-4 text-center translate-y-12 mt-2">
                 {itemsRedeemed !== null

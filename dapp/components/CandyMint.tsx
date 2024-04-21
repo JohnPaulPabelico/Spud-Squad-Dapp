@@ -27,9 +27,15 @@ const candyMachineAddress = publicKey(
 );
 const treasury = publicKey(process.env.NEXT_PUBLIC_TREASURY ?? "");
 
-export const CandyMint: FC = () => {
+interface CandyMintProps {
+  setSuccessMessage: (message: string | null) => void;
+}
+
+export const CandyMint: FC<CandyMintProps> = ({ setSuccessMessage }) => {
   const wallet = useWallet();
-  const [successMessage, setSuccessMessage] = useState<string | null>(null);
+  const [successMessage, setLocalSuccessMessage] = useState<string | null>(
+    null
+  );
 
   const umi = useMemo(() => {
     return createUmi(ENDPOINT)
@@ -71,11 +77,13 @@ export const CandyMint: FC = () => {
       });
       const txid = bs58.encode(signature);
       console.log("success", `Mint successful! ${txid}`);
+      setLocalSuccessMessage(`https://solscan.io/tx/${txid}?cluster=devnet`);
       setSuccessMessage(`https://solscan.io/tx/${txid}?cluster=devnet`);
     } catch (error: any) {
       console.log("error", `Mint failed! ${error?.message}`);
     }
-  }, [wallet, umi]);
+  }, [wallet, umi, setSuccessMessage]);
+
   return (
     <div className="flex flex-row justify-center relative">
       <div className="relative group items-center">
@@ -91,18 +99,16 @@ export const CandyMint: FC = () => {
             <span>Mint</span>
           </button>
         )}
-        {successMessage && (
+        {/* {successMessage && (
           <>
             <div className="fixed top-0 left-0 right-0 bottom-0 h-screen z-10"></div>
-            <div
-              className="fixed top-0 left-0 right-0 z-20 flex items-center justify-center transition-all fade-in pt-[76px]" // Added padding-top to account for navigation bar
-            >
+            <div className="fixed top-0 left-0 right-0 z-20 flex items-center justify-center transition-all fade-in pt-[76px]">
               <div className="flex items-center justify-center">
                 <div className="bg-amber-300 p-10 rounded-lg max-w-[384px] lg:max-w-[520.281px]">
                   <IoIosClose
                     className="text-5xl ml-auto cursor-pointer hover:text-white translate-x-5 -translate-y-5 transition"
                     onClick={() => {
-                      setSuccessMessage(null);
+                      setLocalSuccessMessage(null);
                       window.location.reload();
                     }}
                   />
@@ -124,7 +130,7 @@ export const CandyMint: FC = () => {
               </div>
             </div>
           </>
-        )}
+        )} */}
       </div>
     </div>
   );

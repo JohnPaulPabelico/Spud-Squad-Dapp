@@ -2,6 +2,7 @@ import { Inter, Pixelify_Sans } from "next/font/google";
 import "./globals.css";
 import type { Metadata } from "next";
 const inter = Inter({ subsets: ["latin"] });
+import { Analytics } from "@vercel/analytics/react";
 
 const pixelify_sans = Pixelify_Sans({
   subsets: ["latin"],
@@ -21,7 +22,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${pixelify_sans.variable}`}> {children}</body>
+      <body className={`${pixelify_sans.variable}`}>
+        {" "}
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }

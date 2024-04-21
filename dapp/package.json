@@ -20,6 +20,7 @@
     "@solana/wallet-adapter-react-ui": "^0.9.35",
     "@solana/wallet-adapter-wallets": "^0.19.32",
     "@solana/web3.js": "^1.91.7",
+    "@vercel/analytics": "^1.2.2",
     "dotenv": "^16.4.5",
     "immer": "^10.0.4",
     "next": "14.2.1",

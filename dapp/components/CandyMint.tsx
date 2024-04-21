@@ -99,38 +99,6 @@ export const CandyMint: FC<CandyMintProps> = ({ setSuccessMessage }) => {
             <span>Mint</span>
           </button>
         )}
-        {/* {successMessage && (
-          <>
-            <div className="fixed top-0 left-0 right-0 bottom-0 h-screen z-10"></div>
-            <div className="fixed top-0 left-0 right-0 z-20 flex items-center justify-center transition-all fade-in pt-[76px]">
-              <div className="flex items-center justify-center">
-                <div className="bg-amber-300 p-10 rounded-lg max-w-[384px] lg:max-w-[520.281px]">
-                  <IoIosClose
-                    className="text-5xl ml-auto cursor-pointer hover:text-white translate-x-5 -translate-y-5 transition"
-                    onClick={() => {
-                      setLocalSuccessMessage(null);
-                      window.location.reload();
-                    }}
-                  />
-                  <p className="pixelify lg:text-5xl text-4xl -translate-y-8">
-                    Congratulations
-                  </p>
-                  <p className="lg:text-3xl text-xl mt-3 pixelify -translate-y-8">
-                    You have minted a Spud Mate!
-                  </p>
-                  <Link
-                    href={successMessage}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="pixelify font-semibold text-xl bg-green-400 px-2 py-1 rounded-full hover:bg-green-500 hover:scale-110 transition duration-50 shadow-lg -translate-y-2"
-                  >
-                    Click to view Transaction
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </>
-        )} */}
       </div>
     </div>
   );

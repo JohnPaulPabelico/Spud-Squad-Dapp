@@ -101,9 +101,6 @@ const NavBar: FC<NavBarProps> = ({ successMessage }) => {
                 }}
               />
             </div>
-            {/* <button className="pixelify font-semibold text-xl bg-yellow-400 px-4 py-2 rounded-full hover:bg-yellow-500 transition duration-50 shadow-lg -translate-y-2 lg:block hidden">
-            Connect Wallet
-          </button>{" "} */}
           </div>
         </div>
         <div

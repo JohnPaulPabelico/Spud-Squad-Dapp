@@ -93,7 +93,7 @@ export default function Minting({ setSuccessMessage }: MintingProps) {
               Join the Spud Squad now!
             </div>
             <div className="flex items-center justify-center pixelify text-2xl lg:text-3xl text-bold text-center py-3 translate-y-6">
-              Cost: 0.05 SOL
+              Cost: 0.03 SOL
             </div>
             <CandyMint setSuccessMessage={setSuccessMessage} />
             {candyMachineData ? (

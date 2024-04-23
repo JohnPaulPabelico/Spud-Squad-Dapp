@@ -1,5 +1,3 @@
-import Image from "next/image";
-import React, { useContext } from "react";
 import { SiOpensea } from "react-icons/si";
 import { SiTwitter } from "react-icons/si";
 function Footer() {

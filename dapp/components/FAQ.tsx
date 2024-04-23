@@ -1,8 +1,6 @@
-import Image from "next/image";
-import React, { useState } from "react";
 import Accordion from "./Accordion";
 
-function FAQ() {
+function Faq() {
   return (
     <div>
       <section
@@ -40,4 +38,4 @@ function FAQ() {
   );
 }
 
-export default FAQ;
+export default Faq;

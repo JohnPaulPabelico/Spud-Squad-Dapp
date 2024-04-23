@@ -1,10 +1,9 @@
 import React, { useState } from "react";
-import { RiArrowDropDownLine } from "react-icons/ri";
-import { RiArrowDropUpLine } from "react-icons/ri";
+import { RiArrowDropDownLine, RiArrowDropUpLine } from "react-icons/ri";
 
 interface AccordionProps {
-  title: string;
-  answer: string;
+  readonly title: string;
+  readonly answer: string;
 }
 
 function Accordion({ title, answer }: AccordionProps) {

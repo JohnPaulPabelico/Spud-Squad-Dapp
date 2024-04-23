@@ -1,4 +1,4 @@
-import { useConnection, useWallet } from "@solana/wallet-adapter-react";
+import { useWallet } from "@solana/wallet-adapter-react";
 import { FC, useCallback, useMemo, useState } from "react";
 import { createUmi } from "@metaplex-foundation/umi-bundle-defaults";
 import {
@@ -18,8 +18,6 @@ import { mplTokenMetadata } from "@metaplex-foundation/mpl-token-metadata";
 import { setComputeUnitLimit } from "@metaplex-foundation/mpl-toolbox";
 import { clusterApiUrl } from "@solana/web3.js";
 import * as bs58 from "bs58";
-import Link from "next/link";
-import { IoIosClose } from "react-icons/io";
 
 const ENDPOINT = process.env.NEXT_PUBLIC_RPC || clusterApiUrl("devnet");
 const candyMachineAddress = publicKey(

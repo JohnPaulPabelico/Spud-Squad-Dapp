@@ -1,10 +1,10 @@
 import React, { ReactElement, useEffect, useState, useCallback } from "react";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+//import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 interface CarouselProps {
-  children: ReactElement[];
-  autoSlide?: boolean;
-  autoSlideInterval?: number;
+  readonly children: ReactElement[];
+  readonly autoSlide?: boolean;
+  readonly autoSlideInterval?: number;
 }
 
 export default function Carousel({
@@ -14,9 +14,9 @@ export default function Carousel({
 }: CarouselProps) {
   const [curr, setCurr] = useState(0);
 
-  const prev = useCallback(() => {
-    setCurr((curr) => (curr === 0 ? slides.length - 1 : curr - 1));
-  }, [slides.length]);
+  // const prev = useCallback(() => {
+  //   setCurr((curr) => (curr === 0 ? slides.length - 1 : curr - 1));
+  // }, [slides.length]);
 
   const next = useCallback(() => {
     setCurr((curr) => (curr === slides.length - 1 ? 0 : curr + 1));

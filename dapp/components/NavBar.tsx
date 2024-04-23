@@ -1,11 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useState, FC } from "react";
 import { FaBars } from "react-icons/fa";
 import { GrClose } from "react-icons/gr";
 import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
 import { IoIosClose } from "react-icons/io";
-import { FC } from "react";
 
 interface NavBarProps {
   successMessage: string | null;

@@ -12,7 +12,7 @@ import NavBar from "../components/NavBar";
 import Minting from "../components/Minting";
 import About from "../components/About";
 import Gallery from "../components/Gallery";
-import FAQ from "../components/FAQ";
+import Faq from "../components/Faq";
 import Footer from "../components/Footer";
 
 export default function Home() {
@@ -59,7 +59,7 @@ export default function Home() {
                   }}
                   className="min-h-32 bg-repeat"
                 ></div>
-                <FAQ />
+                <Faq />
                 <Footer />
               </div>
             </WalletModalProvider>

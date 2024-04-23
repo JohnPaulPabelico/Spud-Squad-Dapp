@@ -1,9 +1,4 @@
-import Image from "next/image";
 import Link from "next/link";
-import React, { useState } from "react";
-import { FaBars } from "react-icons/fa";
-import { GrClose } from "react-icons/gr";
-
 function Landing() {
   return (
     <div>

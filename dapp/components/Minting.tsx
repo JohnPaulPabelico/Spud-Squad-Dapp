@@ -1,16 +1,13 @@
 import Image from "next/image";
-import { useWallet } from "@solana/wallet-adapter-react";
-import { useMemo, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Carousel from "./Carousel";
 import { CandyMint } from "./CandyMint";
 import { createUmi } from "@metaplex-foundation/umi-bundle-defaults";
 import { publicKey } from "@metaplex-foundation/umi";
 import {
   fetchCandyMachine,
-  mplCandyMachine,
+  CandyMachine,
 } from "@metaplex-foundation/mpl-candy-machine";
-import { walletAdapterIdentity } from "@metaplex-foundation/umi-signer-wallet-adapters";
-import { mplTokenMetadata } from "@metaplex-foundation/mpl-token-metadata";
 import { clusterApiUrl } from "@solana/web3.js";
 const spudslides = [
   "/Gallery Images/1.svg",
@@ -23,10 +20,8 @@ const spudslides = [
 ];
 
 interface MintingProps {
-  setSuccessMessage: (message: string | null) => void;
+  readonly setSuccessMessage: (message: string | null) => void;
 }
-
-import { CandyMachine } from "@metaplex-foundation/mpl-candy-machine";
 
 const quicknodeEndpoint =
   process.env.NEXT_PUBLIC_RPC || clusterApiUrl("devnet");
@@ -35,8 +30,6 @@ const candyMachineAddress = publicKey(
 );
 
 export default function Minting({ setSuccessMessage }: MintingProps) {
-  const wallet = useWallet();
-
   const [candyMachineData, setCandyMachineData] = useState<CandyMachine | null>(
     null
   );
